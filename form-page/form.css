@@ -5,23 +5,25 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    /* background-color: rgb(255, 255, 255); */
+    background-image: url("https://assetsio.reedpopcdn.com/dnd-players-handbook-product-image.png?width=1200&height=1200&fit=crop&quality=100&format=png&enable=upscale&auto=webp");
 }
 
 .container {
     width: 600px;
     padding: 20px;
     background-color: #fff;
+    opacity: 0.9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
 }
 
-label[for="name"] {
+/* label[for="name"] {
     border: solid red;
-}
+} */
 
 .container #name {
-    border: solid red;
-    width: 50%;
+    width: 60%;
 }
 
 .container p {
@@ -32,14 +34,12 @@ form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 16px;
-    /* border: solid red; */
 }
 
 .label-input-container {
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;
-    /* border: solid red */
 }
 
 label {
@@ -51,7 +51,6 @@ textarea {
     width: 90%;
     padding: 10px;
     margin-bottom: 10px;
-    /* border: solid red; */
 }
 
 select {
@@ -63,19 +62,24 @@ select {
 .buttons {
     display: flex;
     justify-content: space-between;
-    /* border: solid red; */
 }
 
 button {
-    width: calc(25% - 10px);
+    width: calc(33% - 10px);
     padding: 10px;
     background-color: #050000;
     color: #fff;
-    border: none;
+    border: 4px solid #fe0707;
     cursor: pointer;
-    /* border: solid red */
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 button:hover {
     background-color: #ff0000;
+    border: 3px solid #000000;
 }
+
+button:active {
+    box-shadow: 2px 2px 5px #000000;
+  }

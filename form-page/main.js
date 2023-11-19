@@ -1,1 +1,0 @@
-// Add functionality for random option to generate a random alignment
