@@ -1,13 +1,20 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-image: url("https://www.dndbeyond.com/attachments/2/723/phbcover.jpg");
+    background-size: cover;
+    background-position: center;
     margin: 0;
+    cursor: url("http://www.rw-designer.com/cursor-extern.php?id=118351"), pointer;
 }
 
 .container {
     max-width: 600px;
-    margin: 20px auto;
+    margin: 50px auto;
     background-color: #fff;
+    background-image: url("https://t4.ftcdn.net/jpg/04/33/88/81/360_F_433888142_CuT7E8O5CWQjxECbwqbS52ukuMc9jmHl.jpg");
+    background-position: center;
+    background-size: 300vh 300vw;
+    opacity: 0.8;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -40,11 +47,26 @@ button {
     font-size: 16px;
     background-color: #050000;
     color: #fff;
-    border: none;
+    border: 4px solid #fe0707;
     border-radius: 4px;
     cursor: pointer;
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 button:hover {
     background-color: #ff0000;
+    border: 3px solid #000000;
+    cursor: url("http://www.rw-designer.com/cursor-extern.php?id=118351"), pointer;
+}
+
+button:active {
+    box-shadow: 2px 2px 5px #000000;
+}
+
+@media (max-width: 740px) {
+    .container {
+        background-size: 600vh 600vw;
+        background-size: cover;
+    }
 }

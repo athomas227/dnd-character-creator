@@ -5,25 +5,31 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* background-color: rgb(255, 255, 255); */
     background-image: url("https://assetsio.reedpopcdn.com/dnd-players-handbook-product-image.png?width=1200&height=1200&fit=crop&quality=100&format=png&enable=upscale&auto=webp");
+    background-size: cover;
+    background-position: center;
+    cursor: url("http://www.rw-designer.com/cursor-extern.php?id=118351"), pointer;
 }
 
+/* FORM */
 .container {
     width: 600px;
     padding: 20px;
     background-color: #fff;
+    background-image: url("https://t4.ftcdn.net/jpg/04/33/88/81/360_F_433888142_CuT7E8O5CWQjxECbwqbS52ukuMc9jmHl.jpg");
+    background-position: center;
+    background-size: 100vh 100vw;
     opacity: 0.9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
 }
 
-/* label[for="name"] {
-    border: solid red;
-} */
-
 .container #name {
-    width: 60%;
+    width: 63%;
+}
+
+.container input {
+    text-align: center;
 }
 
 .container p {
@@ -59,6 +65,13 @@ select {
     margin-bottom: 10px;
 }
 
+input:hover,
+textarea:hover,
+select:hover {
+    cursor: url("http://www.rw-designer.com/cursor-extern.php?id=118351"), pointer;
+}
+
+/* BUTTONS */
 .buttons {
     display: flex;
     justify-content: space-between;
@@ -78,8 +91,16 @@ button {
 button:hover {
     background-color: #ff0000;
     border: 3px solid #000000;
+    cursor: url("http://www.rw-designer.com/cursor-extern.php?id=118351"), pointer;
 }
 
 button:active {
     box-shadow: 2px 2px 5px #000000;
-  }
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 910px) {
+    .container {
+        background-size: 250vh 250vw;
+    }
+}
