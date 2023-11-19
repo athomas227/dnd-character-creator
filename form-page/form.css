@@ -113,6 +113,10 @@ a {
     color: #fff;
 }
 
+a:hover {
+    cursor: url("http://www.rw-designer.com/cursor-extern.php?id=118351"), pointer;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 910px) {
     .container {
