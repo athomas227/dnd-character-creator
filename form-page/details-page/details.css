@@ -7,6 +7,7 @@ body {
     cursor: url("http://www.rw-designer.com/cursor-extern.php?id=118351"), pointer;
 }
 
+/* DETAILS BOX */
 .container {
     max-width: 600px;
     margin: 50px auto;
@@ -25,6 +26,7 @@ body {
     color: #333;
 }
 
+/* FETCHED INFO */
 #characterDetails {
     margin-top: 20px;
 }
@@ -40,6 +42,7 @@ body {
     margin: 15px 0;
 }
 
+/* BUTTON */
 button {
     display: block;
     margin: 20px auto;
@@ -64,6 +67,7 @@ button:active {
     box-shadow: 2px 2px 5px #000000;
 }
 
+/* MEDIA QUERIES */
 @media (max-width: 740px) {
     .container {
         background-size: 600vh 600vw;
