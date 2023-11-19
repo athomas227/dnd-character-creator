@@ -67,6 +67,21 @@ button:active {
     box-shadow: 2px 2px 5px #000000;
 }
 
+/* FOOTER */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+a {
+    color: #fff;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 740px) {
     .container {
