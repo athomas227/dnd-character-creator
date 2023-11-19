@@ -1,8 +1,11 @@
+// Function to go back to the previous page in the browser's history
 function goBack() {
     window.history.back();
 }
 
+// Function to display character details based on URL parameters
 function displayCharacterDetails() {
+    // Retrieve character details from the URL parameters
     const name = new URLSearchParams(window.location.search).get('name');
     const race = new URLSearchParams(window.location.search).get('race');
     const characterClass = new URLSearchParams(window.location.search).get('class');
@@ -11,7 +14,9 @@ function displayCharacterDetails() {
     const gender = new URLSearchParams(window.location.search).get('gender');
     const language = new URLSearchParams(window.location.search).get('language');
 
+    // Get the HTML element where character details will be displayed
     const characterDetailsElement = document.getElementById('characterDetails');
+    // Display basic character details
     characterDetailsElement.innerHTML = `
         <p><strong>Name: </strong>${name}</p>
         <p><strong>Race: </strong>${race}</p>
@@ -22,6 +27,8 @@ function displayCharacterDetails() {
         <p><strong>Language: </strong>${language}</p>
     `;
 
+    
+    // Fetch and display additional details from the D&D 5th Edition API for race
     fetch(`https://www.dnd5eapi.co/api/races/${race}`)
     .then(response => response.json())
     .then(data => {
@@ -46,6 +53,7 @@ function displayCharacterDetails() {
     });
     
 
+    // Fetch and display additional details from the D&D 5th Edition API for class
     fetch(`https://www.dnd5eapi.co/api/classes/${characterClass}`)
     .then(response => response.json())
     .then(data => {
@@ -63,6 +71,7 @@ function displayCharacterDetails() {
     });
 
 
+    // Fetch and display additional details from the D&D 5th Edition API for alignment
     fetch(`https://www.dnd5eapi.co/api/alignments/${alignment}`)
     .then(response => response.json())
     .then(data => {
@@ -78,6 +87,7 @@ function displayCharacterDetails() {
     });
 
 
+    // Fetch and display additional details from the D&D 5th Edition API for language
     fetch(`https://www.dnd5eapi.co/api/languages/${language}`)
     .then(response => response.json())
     .then(data => {
@@ -94,4 +104,5 @@ function displayCharacterDetails() {
     });
 }
 
+// Trigger the displayCharacterDetails function when the window is fully loaded
 window.onload = displayCharacterDetails;
