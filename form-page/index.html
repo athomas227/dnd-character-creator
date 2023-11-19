@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"> defer</script>
+    <title>DnD Character Creator</title>
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="header">DnD Character Creator</h2>
+
+        <label for="name">Player's Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <form>
+            <div class="info-1">
+                <label for="race">Race:</label>
+                <select id="race" name="race">
+                    <option value="select">----Select One----</option>
+                    <option value="dragonborn">Dragonborn</option>
+                    <option value="dwarf">Dwarf</option>
+                    <option value="elf">Elf</option>
+                    <option value="gnome">Gnome</option>
+                    <option value="half-elf">Half-Elf</option>
+                    <option value="halfling">Halfling</option>
+                    <option value="half-orc">Half-Orc</option>
+                    <option value="human">Human</option>
+                    <option value="tiefling">Tiefling</option>
+                </select>
+                
+                <label for="class">Class:</label>
+                <select id="class" name="class">
+                    <option value="select">----Select One----</option>
+                    <option value="barbarian">Barbarian</option>
+                    <option value="bard">Bard</option>
+                    <option value="cleric">Cleric</option>
+                    <option value="druid">Druid</option>
+                    <option value="fighter">Fighter</option>
+                    <option value="monk">Monk</option>
+                    <option value="paladin">Paladin</option>
+                    <option value="ranger">Ranger</option>
+                    <option value="rogue">Rogue</option>
+                    <option value="sorcerer">Sorcerer</option>
+                    <option value="warlock">Warlock</option>
+                    <option value="wizard">Wizard</option>
+                </select>
+
+                <label for="background">Background:</label>
+                <select id="background" name="background">
+                    <option value="select">----Select One----</option>
+                    <option value="acolyte">Acolyte</option>
+                    <option value="charlatan">Charlatan</option>
+                    <option value="criminal">Criminal</option>
+                    <option value="entertainer">Entertainer</option>
+                    <option value="folk-hero">Folk Hero</option>
+                    <option value="guild-artisan">Guild Artisan</option>
+                    <option value="hermit">Hermit</option>
+                    <option value="noble">Noble</option>
+                    <option value="outlander">Outlander</option>
+                    <option value="sage">Sage</option>
+                    <option value="sailor">Sailor</option>
+                    <option value="soldier">Soldier</option>
+                    <option value="urchin">Urchin</option>
+                </select>
+            </div>
+
+
+            <div class="info-2">
+                <label for="alignment">Alignment:</label>
+                <select id="alignment" name="alignment">
+                    <option value="select">----Select One----</option>
+                    <option value="random">Random</option>
+                    <option value="random-evil">Random (not good)</option>
+                    <option value="random-good">Random (not evil)</option>
+                    <option value="lawful-good">Lawful Good</option>
+                    <option value="neutral-good">Neutral Good</option>
+                    <option value="chaotic-good">Chaotic Good</option>
+                    <option value="lawful-neutral">Lawful Neutral</option>
+                    <option value="true-neutral">True Neutral</option>
+                    <option value="chaotic-neutral">Chaotic Neutral</option>
+                    <option value="lawful-evil">Lawful Evil</option>
+                    <option value="neutral-evil">Neutral Evil</option>
+                    <option value="chaotic-evil">Chaotic Evil</option>
+                </select>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="select">----Select One----</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="non-binary">Non-Binary</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="language">Language:</label>
+                <select id="language" name="language">
+                    <option value="select">----Select One----</option>
+                    <option value="common">Common</option>
+                    <option value="dwarvish">Dwarvish</option>
+                    <option value="elvish">Elvish</option>
+                    <option value="giant">Giant</option>
+                    <option value="gnomish">Gnomish</option>
+                    <option value="goblin">Goblin</option>
+                    <option value="halfling">Halfling</option>
+                    <option value="orc">Orc</option>
+                    <option value="abyssal">Abyssal</option>
+                    <option value="celestial">Celestial</option>
+                    <option value="deep-speech">Deep Speech</option>
+                    <option value="draconic">Draconic</option>
+                    <option value="infernal">Infernal</option>
+                    <option value="primordial">Primordial</option>
+                    <option value="sylvan">Sylvan</option>
+                    <option value="undercommon">Undercommon</option>
+                </select>
+            </div>
+        </form>
+
+        <p>Note: Any above option left blank will be randomly set.</p>
+
+        <div class="buttons">
+            <button type="submit">Re-roll</button>
+            <button type="submit">Reset</button>
+            <button type="submit">Generate</button>
+            <button type="submit">Get Details</button>
+        </div>
+    </div>
+
+</body>
+</html>
