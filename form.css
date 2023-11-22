@@ -1,7 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -9,6 +8,7 @@ body {
     background-size: cover;
     background-position: center;
     cursor: url("http://www.rw-designer.com/cursor-extern.php?id=118351"), pointer;
+    background-attachment: fixed;
 }
 
 /* FORM */
@@ -22,6 +22,8 @@ body {
     opacity: 0.9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
+    margin: 50px auto;
+    margin-top: 275px;
 }
 
 .container #name {
@@ -96,6 +98,25 @@ button:hover {
 
 button:active {
     box-shadow: 2px 2px 5px #000000;
+}
+
+/* PREVIEW */
+.preview {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    background-image: url("https://t4.ftcdn.net/jpg/04/33/88/81/360_F_433888142_CuT7E8O5CWQjxECbwqbS52ukuMc9jmHl.jpg");
+    background-position: center;
+    background-size: 300vh 300vw;
+    opacity: 0.9;
+    padding: 20px;
+    margin-top: 100px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.preview h2 {
+    text-align: center;
 }
 
 /* FOOTER */

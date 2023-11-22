@@ -59,8 +59,89 @@ document.addEventListener('DOMContentLoaded', function() {
       const alignment = document.getElementById('alignment').value;
       const gender = document.getElementById('gender').value;
       const language = document.getElementById('language').value;
+      
 
       // Redirect to the details page with the gathered parameters
       window.location.href = `details-page/details.html?name=${name}&race=${race}&class=${characterClass}&background=${background}&alignment=${alignment}&gender=${gender}&language=${language}`;
     });
+
+//////////////////////////
+
+    // Get the HTML element where character details will be displayed
+    const fakeDetailsElement = document.getElementById('fakeDetails');
+
+    // Fetch and display additional details from the D&D 5th Edition API for race
+    fetch(`https://www.dnd5eapi.co/api/races/dragonborn`)
+    .then(response => response.json())
+    .then(data => {
+        fakeDetailsElement.innerHTML += `
+        <hr/>
+        <h3>Race Details</h3>
+        <p><strong>Speed: </strong>${data.speed}</p>
+        <p><strong>Alignment: </strong>${data.alignment}</p>
+        <p><strong>Age: </strong>${data.age}</p>
+        <p><strong>Size: </strong>${data.size}</p>
+        <p><strong>Size Description: </strong>${data.size_description}</p>
+        <p><strong>Languages: </strong>${data.languages.map(traits => traits.name).join(', ')}</p>
+        <p><strong>Language Description: </strong>${data.language_desc}</p>
+        <p><strong>Traits: </strong>${data.traits.map(traits => traits.name).join(', ')}</p>
+        <p><strong>Starting Proficiencies: </strong>${data.starting_proficiencies.map(proficiency => proficiency.name).join(', ')}</p>
+        <p><strong>Ability Bonuses: </strong>${data.ability_bonuses.map(ability => `${ability.bonus} ${ability.ability_score.name}`).join(', ')}</p>
+        <p><strong>Subraces: </strong>${data.subraces.map(subraces => subraces.name).join(', ')}</p>
+        `;
+    })
+    .catch(error => {
+        console.error('Error fetching data from D&D 5th Edition API:', error);
+    });
+
+    // Fetch and display additional details from the D&D 5th Edition API for class
+    fetch(`https://www.dnd5eapi.co/api/classes/paladin`)
+    .then(response => response.json())
+    .then(data => {
+        fakeDetailsElement.innerHTML += `
+        <hr/>
+        <h3>Class Details</h3>
+        <p><strong>Hit Dice: </strong>${data.hit_die}</p>
+        <p><strong>Proficiencies: </strong>${data.proficiencies.map(proficiency => proficiency.name).join(', ')}</p>
+        <p><strong>Saving Throw: </strong>${data.saving_throws.map(throws => throws.name).join(', ')}</p>
+        <p><strong>Starting Equipment: </strong>${data.starting_equipment.map(equip => `${equip.quantity} ${equip.equipment.name}`).join(', ')} </p>
+        `;
+    })
+    .catch(error => {
+        console.error('Error fetching data from D&D 5th Edition API for class:', error);
+    });
+
+
+    // Fetch and display additional details from the D&D 5th Edition API for alignment
+    fetch(`https://www.dnd5eapi.co/api/alignments/lawful-evil`)
+    .then(response => response.json())
+    .then(data => {
+        fakeDetailsElement.innerHTML += `
+        <hr/>
+        <h3>Alignment Details</h3>
+        <p>${data.desc}</p>
+        
+        `;
+    })
+    .catch(error => {
+        console.error('Error fetching data from D&D 5th Edition API for class:', error);
+    });
+
+
+    // Fetch and display additional details from the D&D 5th Edition API for language
+    fetch(`https://www.dnd5eapi.co/api/languages/draconic`)
+    .then(response => response.json())
+    .then(data => {
+        fakeDetailsElement.innerHTML += `
+        <hr/>
+        <h3>Language Details</h3>
+        <p><strong>Language: </strong>${data.name}</p>
+        <p><strong>Type: </strong>${data.type}</p>
+        <p><strong>Typical Speakers: </strong>${data.typical_speakers.map(speakers => speakers).join(', ')}</p>
+        `;
+    })
+    .catch(error => {
+        console.error('Error fetching data from D&D 5th Edition API for class:', error);
+    });
+
   });
