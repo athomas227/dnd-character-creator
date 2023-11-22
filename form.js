@@ -65,12 +65,11 @@ document.addEventListener('DOMContentLoaded', function() {
       window.location.href = `details-page/details.html?name=${name}&race=${race}&class=${characterClass}&background=${background}&alignment=${alignment}&gender=${gender}&language=${language}`;
     });
 
-//////////////////////////
 
-    // Get the HTML element where character details will be displayed
+    // Get the HTML element where mock details will be displayed
     const fakeDetailsElement = document.getElementById('fakeDetails');
 
-    // Fetch and display additional details from the D&D 5th Edition API for race
+    // Fetch and display additional details from the D&D 5th Edition API for dragonborn race
     fetch(`https://www.dnd5eapi.co/api/races/dragonborn`)
     .then(response => response.json())
     .then(data => {
@@ -94,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Error fetching data from D&D 5th Edition API:', error);
     });
 
-    // Fetch and display additional details from the D&D 5th Edition API for class
+    // Fetch and display additional details from the D&D 5th Edition API for paladin class
     fetch(`https://www.dnd5eapi.co/api/classes/paladin`)
     .then(response => response.json())
     .then(data => {
@@ -112,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    // Fetch and display additional details from the D&D 5th Edition API for alignment
+    // Fetch and display additional details from the D&D 5th Edition API for lawful evil alignment
     fetch(`https://www.dnd5eapi.co/api/alignments/lawful-evil`)
     .then(response => response.json())
     .then(data => {
@@ -128,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    // Fetch and display additional details from the D&D 5th Edition API for language
+    // Fetch and display additional details from the D&D 5th Edition API for draconic language
     fetch(`https://www.dnd5eapi.co/api/languages/draconic`)
     .then(response => response.json())
     .then(data => {
