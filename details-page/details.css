@@ -12,7 +12,7 @@ body {
     max-width: 600px;
     margin: 50px auto;
     background-color: #fff;
-    background-image: url("https://t4.ftcdn.net/jpg/04/33/88/81/360_F_433888142_CuT7E8O5CWQjxECbwqbS52ukuMc9jmHl.jpg");
+    background-color: rgb(232, 202, 171);
     background-position: center;
     background-size: 300vh 300vw;
     opacity: 0.8;
